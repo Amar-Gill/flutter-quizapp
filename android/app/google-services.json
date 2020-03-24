@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1081981769165",
+    "firebase_url": "https://leet-flutter-quiz-app.firebaseio.com",
+    "project_id": "leet-flutter-quiz-app",
+    "storage_bucket": "leet-flutter-quiz-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081981769165:android:6d0823491e0dcb3cc8e084",
+        "android_client_info": {
+          "package_name": "dev.amar.quizdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081981769165-21cjq7u4qsesj7ig11honv8ah27qhati.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.amar.quizdemo",
+            "certificate_hash": "38024e12a5718f4c6d56f658bb0a1b402bbeb2ae"
+          }
+        },
+        {
+          "client_id": "1081981769165-92dqki6133ar2v49aakika0nu5baeg94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMgZUsCSQTJx5EQgQ5o-NgajJSzcUfDyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081981769165-92dqki6133ar2v49aakika0nu5baeg94.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
