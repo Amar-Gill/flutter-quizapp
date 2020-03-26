@@ -10,48 +10,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: CoolBox(),
+          child: Container(
+            alignment: Alignment.center,
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration(
+                color: Colors.blue,
+                shape: BoxShape.circle,
+                border: Border.all(width: 5),
+                boxShadow: [
+                  BoxShadow(offset: Offset(40, 40), color: Colors.pink),
+                  BoxShadow(offset: Offset(20, 20), color: Colors.yellow),
+                ],
+                gradient: RadialGradient(colors: [Colors.yellow, Colors.pink])),
+          ),
         ),
-      ),
-    );
-  }
-}
-
-class CoolBox extends StatefulWidget {
-  const CoolBox({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  _CoolBoxState createState() => _CoolBoxState();
-}
-
-class _CoolBoxState extends State<CoolBox> {
-  double width = 100;
-  double height = 100;
-  Color color = Colors.green;
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: Duration(seconds: 2),
-      curve: Curves.bounceInOut,
-      color: color,
-      width: width,
-      height: height,
-      child: FlatButton(
-        child: Text('Random'),
-        onPressed: () {
-          setState(() {
-            width = Random().nextDouble() * 400;
-            height = Random().nextDouble() * 400;
-
-            int r = Random().nextInt(255);
-            int b = Random().nextInt(255);
-            int g = Random().nextInt(255);
-            color = Color.fromRGBO(r, b, g, 1);
-          });
-        },
       ),
     );
   }
