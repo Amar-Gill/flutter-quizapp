@@ -10,18 +10,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        // override default value for color
-        body: Center(
-          child: Platform.isAndroid
-              ? Switch(
-                  value: true,
-                  onChanged: (v) => null,
-                )
-              : CupertinoSwitch(
-                  value: true,
-                  onChanged: (v) => null,
-                ),
+        appBar: AppBar(
+          title: Text('My cool app'),
         ),
+        body: Center(
+          child: Icon(Icons.cake),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+        ),
+        drawer: Drawer(),
       ),
     );
   }
