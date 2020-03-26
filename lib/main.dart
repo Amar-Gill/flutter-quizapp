@@ -11,21 +11,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                child: Container(
-                  child: Text(
-                    'Hello Flutter this text is too long',
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              )
-            ],
+          child: GestureDetector(
+            onTap: () => print('Tap Tap Tap Tap Tap'),
+            child: Container(
+              height: 100,
+              width: 100,
+              color: Colors.red,
+            ),
           ),
         ),
       ),
