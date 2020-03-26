@@ -10,14 +10,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Container(
-          color: Colors.blue,
-          margin: EdgeInsets.all(100),
-          child: Icon(Icons.cake),
-          width: 100,
-          height: 100,
-          alignment: Alignment.bottomRight,
-          padding: EdgeInsets.all(50),
+        body: Center(
+          child: Row(
+            children: <Widget>[
+              Expanded(
+                child: Container(
+                  child: Text(
+                    'Hello Flutter this text is too long',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
