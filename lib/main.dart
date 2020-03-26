@@ -10,16 +10,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Material(
-            color: Colors.red,
-            child: InkWell(
-              onTap: () => print('Tapped)'),
-              child: Container(
-                height: 100,
-                width: 100,
-              ),
-            ),
+        body: Container(
+          color: Colors.blue,
+          padding: EdgeInsets.all(16),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Icon(Icons.cake, color: Colors.white, size: 50,),
+              Icon(Icons.cake, color: Colors.white, size: 100,),
+              Icon(Icons.cake, color: Colors.white, size: 150,),
+            ],
           ),
         ),
       ),
