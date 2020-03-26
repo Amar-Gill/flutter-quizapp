@@ -10,16 +10,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('My cool app'),
-        ),
-        body: Center(
+        body: Container(
+          color: Colors.blue,
+          margin: EdgeInsets.all(100),
           child: Icon(Icons.cake),
+          width: 100,
+          height: 100,
+          alignment: Alignment.bottomRight,
+          padding: EdgeInsets.all(50),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-        ),
-        drawer: Drawer(),
       ),
     );
   }
