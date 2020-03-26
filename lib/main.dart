@@ -10,16 +10,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: ListView.builder(
-          itemBuilder: (context, idx) {
-            print('constructing container: $idx');
-            return Container(
-              height: 100,
-              color: Colors.blue,
-              margin: EdgeInsets.all(20),
-              child: Text('$idx'),
-            );
-          },
+        body: GridView.count(
+          crossAxisCount: 2,
+          children: _cards(),
         ),
       ),
     );
@@ -31,7 +24,8 @@ List<Widget> _cards() {
       .map((v) => Container(
             color: Colors.blue,
             margin: EdgeInsets.all(20),
-            width: 100,
+            // width: 50,
+            // height: 50,
             child: Text('$v'),
           ))
       .toList();
