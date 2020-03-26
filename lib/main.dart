@@ -8,6 +8,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        '/home': (context) => HomeScreen(),
+        '/slideshow': (context) => SlideshowScreen()
+      },
       home: HomeScreen(),
     );
   }
@@ -26,10 +30,24 @@ class HomeScreen extends StatelessWidget {
           child: Text('Go'),
           color: Colors.red,
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => HomeScreen()));
+            Navigator.pushNamed(context, '/slideshow');
           },
         ),
+      ),
+    );
+  }
+}
+
+class SlideshowScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Slideshow'),
+        backgroundColor: Colors.red,
+      ),
+      body: Center(
+        child: null,
       ),
     );
   }
