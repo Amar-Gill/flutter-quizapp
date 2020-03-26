@@ -11,12 +11,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: GestureDetector(
-            onTap: () => print('Tap Tap Tap Tap Tap'),
-            child: Container(
-              height: 100,
-              width: 100,
-              color: Colors.red,
+          child: Material(
+            color: Colors.red,
+            child: InkWell(
+              onTap: () => print('Tapped)'),
+              child: Container(
+                height: 100,
+                width: 100,
+              ),
             ),
           ),
         ),
