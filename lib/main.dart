@@ -10,79 +10,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: SizedBox.expand(
-          child: Stack(
-            children: <Widget>[
-              Icon(
-                Icons.camera,
-                size: 100,
-                color: Colors.red,
-              ),
-              Align(
-                alignment: Alignment.center,
-                child: Icon(
-                  Icons.camera,
-                  size: 100,
-                  color: Colors.blue,
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: Icon(
-                  Icons.camera,
-                  size: 100,
-                  color: Colors.green,
-                ),
-              ),
-            ],
-          ),
+        body: ListView(scrollDirection: Axis.horizontal,
+          children: _cards(),
         ),
       ),
     );
   }
 }
 
-class MyFirstWidget extends StatefulWidget {
-  // properties here are immutable - can override in instantiation calls
-  final Color color;
-
-  // initialize attributes of widget
-  MyFirstWidget({Key key, this.color = Colors.red}) : super(key: key);
-
-  @override
-  _MyFirstWidgetState createState() => _MyFirstWidgetState();
-}
-
-class _MyFirstWidgetState extends State<MyFirstWidget> {
-  // define mutable state here
-  int count = 0;
-
-  // lifecycle hooks
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: FlatButton(
-        child: Text('$count'),
-        onPressed: () {
-          setState(
-            () {
-              count++;
-            },
-          );
-        },
-      ),
-    );
-  }
+List<Widget> _cards() {
+  return [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      .map((v) => Container(
+            color: Colors.blue,
+            margin: EdgeInsets.all(20),
+            width: 100,
+            child: Text('$v'),
+          ))
+      .toList();
 }
