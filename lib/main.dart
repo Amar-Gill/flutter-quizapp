@@ -8,13 +8,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: Colors.lightGreen,
-        textTheme: TextTheme(
-            body1: TextStyle(color: Colors.red, fontSize: 30),
-            headline: TextStyle(color: Colors.blue, fontSize: 70)),
-      ),
       home: HomeScreen(),
     );
   }
@@ -24,11 +17,18 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Home'),
+        backgroundColor: Colors.red,
+      ),
       body: Center(
-        child: Text(
-          'Hello World',
-          style: Theme.of(context).textTheme.headline,
+        child: FlatButton(
+          child: Text('Go'),
+          color: Colors.red,
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          },
         ),
       ),
     );
