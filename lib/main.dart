@@ -10,8 +10,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: ListView(scrollDirection: Axis.horizontal,
-          children: _cards(),
+        body: ListView.builder(
+          itemBuilder: (context, idx) {
+            print('constructing container: $idx');
+            return Container(
+              height: 100,
+              color: Colors.blue,
+              margin: EdgeInsets.all(20),
+              child: Text('$idx'),
+            );
+          },
         ),
       ),
     );
