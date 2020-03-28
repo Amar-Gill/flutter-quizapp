@@ -14,13 +14,13 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepOrange,
-        title: Text(user.displayName),
+        title: Text('profile'),
       ),
       body: Center(
         child: FlatButton(
           onPressed: () async {
             await auth.signOut();
-            Navigator.of(context).pushNamedAndRemoveUntil('/', (route) => false)
+            Navigator.of(context).pushNamedAndRemoveUntil('/', (route) => false);
           },
           child: Text('logout'),
           color: Colors.red,

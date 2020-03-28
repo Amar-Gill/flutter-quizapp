@@ -84,6 +84,9 @@ class LoginButton extends StatelessWidget {
             Navigator.pushReplacementNamed(context, '/topics');
           }
         },
+        label: Expanded(
+          child: Text('$text', textAlign: TextAlign.center),
+        ),
       ),
     );
   }
