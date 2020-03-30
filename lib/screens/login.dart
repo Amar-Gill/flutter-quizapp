@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
               style: Theme.of(context).textTheme.headline,
             ),
             Text(
-              'Your tagline',
+              'Complete quizzes. Become l33t.',
             ),
             LoginButton(
               text: 'LOGIN WITH GOOGLE',
