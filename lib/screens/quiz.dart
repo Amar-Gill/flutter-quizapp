@@ -89,7 +89,7 @@ class StartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var state = Provider.of<QuizState>(context);
+    var state = Provider.of<QuizState>(context, listen: false);
 
     return Container(
       padding: EdgeInsets.all(20),
@@ -171,7 +171,7 @@ class QuestionPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var state = Provider.of<QuizState>(context);
+    var state = Provider.of<QuizState>(context, listen: false);
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
@@ -230,7 +230,7 @@ class QuestionPage extends StatelessWidget {
   /// Bottom sheet shown when Question is answered
   _bottomSheet(BuildContext context, Option opt) {
     bool correct = opt.correct;
-    var state = Provider.of<QuizState>(context);
+    var state = Provider.of<QuizState>(context, listen: false);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {

@@ -91,6 +91,7 @@ class TopicItem extends StatelessWidget {
                 ),
                 // )
                 TopicProgress(topic: topic),
+                // LinearProgressIndicator(value: 0.5,),
               ],
             ),
           ),
