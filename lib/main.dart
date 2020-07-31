@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         StreamProvider<FirebaseUser>.value(value: AuthService().user)
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false, // remove debug banner for screen shots
         // Firebase Analytics
         navigatorObservers: [
           FirebaseAnalyticsObserver(analytics: FirebaseAnalytics()),
